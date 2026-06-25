@@ -1,14 +1,13 @@
 # Desperte Mulher - Questionário de Risco de Violência Doméstica
 
-## 📋 Descrição Geral
+##  Descrição Geral
 
 **Desperte Mulher** é um aplicativo mobile desenvolvido em Flutter que implementa um questionário detalhado para avaliar o risco de violência doméstica. O aplicativo foi criado com foco em segurança, usabilidade e confidencialidade, permitindo que mulheres em situação de risco possam realizar uma auto-avaliação confidencial.
 
 O aplicativo fornece um score de risco baseado nas respostas e oferece recursos de suporte, histórico de avaliações e informações de ajuda.
 
 ---
-
-## 🎯 Objetivos Principais
+##  Objetivos Principais
 
 1. **Avaliar Riscos**: Identificar e quantificar o nível de risco de violência doméstica através de um questionário estruturado
 2. **Proteger Privacidade**: Permitir avaliações anônimas ou identificadas conforme preferência do usuário
@@ -18,7 +17,7 @@ O aplicativo fornece um score de risco baseado nas respostas e oferece recursos 
 
 ---
 
-## 🏗️ Arquitetura e Estrutura do Projeto
+##  Arquitetura e Estrutura do Projeto
 
 ### Estrutura de Diretórios
 
@@ -61,7 +60,7 @@ lib/
 
 ---
 
-## 🔑 Componentes Principais
+## Componentes Principais
 
 ### 1. **Modelo de Dados** (`lib/core/models/`)
 
@@ -165,7 +164,7 @@ Score Total = Σ(resposta_score × resposta_weight) / max_score * 100
 
 ---
 
-## 🎨 Interface e Navegação
+##  Interface e Navegação
 
 ### **Telas Principais**
 
@@ -281,7 +280,7 @@ Score Total = Σ(resposta_score × resposta_weight) / max_score * 100
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+##  Tecnologias Utilizadas
 
 ### **Framework e Linguagem**
 - **Flutter**: Framework mobile multiplataforma
@@ -307,7 +306,7 @@ Score Total = Σ(resposta_score × resposta_weight) / max_score * 100
 
 ---
 
-## 💾 Persistência de Dados
+## Persistência de Dados
 
 ### **Armazenamento Local**
 
@@ -330,7 +329,7 @@ Score Total = Σ(resposta_score × resposta_weight) / max_score * 100
 
 ---
 
-## 🎨 Design System
+## Design System
 
 ### **Paleta de Cores**
 
@@ -368,7 +367,7 @@ Cores de Feedback:
 
 ---
 
-## 📊 Estatísticas de Risco
+## Estatísticas de Risco
 
 ### **Interpretação de Scores**
 
@@ -382,7 +381,7 @@ Cores de Feedback:
 
 ---
 
-## 🔐 Segurança e Privacidade
+##  Segurança e Privacidade
 
 ### **Medidas de Segurança Implementadas**
 
@@ -405,7 +404,7 @@ Cores de Feedback:
 
 ---
 
-## 🚀 Como Executar
+##  Como Executar
 
 ### **Pré-requisitos**
 - Flutter SDK instalado
@@ -454,7 +453,7 @@ flutter build ios --release
 
 ---
 
-## 📁 Dados Mock
+## Dados Mock
 
 O projeto inclui dados mock em `assets/Mock/`:
 
@@ -469,7 +468,7 @@ Estes arquivos contêm as estruturas de perguntas e respostas para testes.
 
 ---
 
-## 🧪 Testes e Validação
+##  Testes e Validação
 
 ### **Componentes Testáveis**
 
@@ -493,18 +492,18 @@ flutter test
 
 ---
 
-## 📱 Platforms Suportadas
+##  Platforms Suportadas
 
-- ✅ **Android** (API 21+)
-- ✅ **iOS** (11.0+)
-- ✅ **Web** (Chrome, Firefox, Safari)
-- ✅ **Windows**
-- ✅ **macOS**
-- ✅ **Linux**
+-  **Android** (API 21+)
+-  **iOS** (11.0+)
+-  **Web** (Chrome, Firefox, Safari)
+-  **Windows**
+-  **macOS**
+-  **Linux**
 
 ---
 
-## 🤝 Recursos e Contatos de Ajuda
+##  Recursos e Contatos de Ajuda
 
 O aplicativo inclui uma seção "Ajuda" com informações sobre:
 
@@ -516,7 +515,7 @@ O aplicativo inclui uma seção "Ajuda" com informações sobre:
 
 ---
 
-## 📝 Estrutura do Questionário Detalhada
+##  Estrutura do Questionário Detalhada
 
 ### **Pergunta 1-8: Histórico de Violência**
 - Ameaças com armas (pontuação 3)
@@ -554,44 +553,44 @@ O aplicativo inclui uma seção "Ajuda" com informações sobre:
 
 ---
 
-## 🔄 Fluxo de Desenvolvimento
+## Fluxo de Desenvolvimento
 
 ### **Etapas Implementadas**
 
-1. ✅ **Estrutura Base**
+1.  **Estrutura Base**
    - Configuração inicial do Flutter
    - Criação de rotas e navegação
 
-2. ✅ **Modelos de Dados**
+2.  **Modelos de Dados**
    - Answer, Question, Respondent
    - EvaluationRecord, QuestionnaireStage
 
-3. ✅ **State Management**
+3.  **State Management**
    - QuestionnaireProvider com Provider
    - Gerenciamento de perguntas e respostas
 
-4. ✅ **Interface de Usuário**
+4.  **Interface de Usuário**
    - 8 telas principais (Onboarding, Questionário, Resultados, etc.)
    - Design System implementado
 
-5. ✅ **Persistência de Dados**
+5.  **Persistência de Dados**
    - SQLite integrado
    - SharedPreferences para configurações
 
-6. ✅ **Questionário Completo**
+6.  **Questionário Completo**
    - 30+ perguntas estruturadas
    - 4 etapas temáticas
 
-7. ✅ **Histórico e Análise**
+7.  **Histórico e Análise**
    - Armazenamento de avaliações
    - Visualização de histórico
 
-8. ✅ **Dashboard Admin**
+8.  **Dashboard Admin**
    - Visualização de estatísticas
 
 ---
 
-## 📊 Diagrama de Classes (Principais)
+##  Diagrama de Classes (Principais)
 
 ```
 Question
@@ -632,7 +631,7 @@ QuestionnaireProvider (ChangeNotifier)
 
 ---
 
-## 🎓 Aprendizados e Boas Práticas
+##  Aprendizados e Boas Práticas
 
 ### **Padrões Utilizados**
 
@@ -643,16 +642,16 @@ QuestionnaireProvider (ChangeNotifier)
 
 ### **Boas Práticas**
 
-- ✅ Comentários em português explicando cada classe
-- ✅ Nomes descritivos em variáveis e funções
-- ✅ Separação de responsabilidades
-- ✅ Reutilização de componentes
-- ✅ Validação de entrada de dados
-- ✅ Tratamento de exceções
+-  Comentários em português explicando cada classe
+-  Nomes descritivos em variáveis e funções
+-  Separação de responsabilidades
+-  Reutilização de componentes
+-  Validação de entrada de dados
+-  Tratamento de exceções
 
 ---
 
-## 🔮 Possíveis Melhorias Futuras
+##  Possíveis Melhorias Futuras
 
 1. **Backend Integration**
    - Sincronização com servidor
@@ -681,7 +680,7 @@ QuestionnaireProvider (ChangeNotifier)
 
 ---
 
-## 📧 Suporte e Contato
+##  Suporte e Contato
 
 Para dúvidas ou sugestões sobre o desenvolvimento:
 
@@ -691,7 +690,7 @@ Para dúvidas ou sugestões sobre o desenvolvimento:
 
 ---
 
-## ✅ Checklist de Apresentação
+##  Checklist de Apresentação
 
 - [ ] Executar aplicativo no dispositivo/emulador
 - [ ] Realizar fluxo completo: Onboarding → Questionário → Resultados
@@ -704,14 +703,8 @@ Para dúvidas ou sugestões sobre o desenvolvimento:
 - [ ] Discutir medidas de segurança e privacidade
 - [ ] Apresentar possíveis melhorias futuras
 
----
 
-## 📄 Licença
-
-Este projeto é desenvolvido com propósito educacional e de apoio social.
-
----
 
 **Versão**: 1.0.0  
 **Última Atualização**: Junho 2026  
-**Desenvolvedor**: Silvano Malfatti
+**Desenvolvedor**: Clara Castro Santos
