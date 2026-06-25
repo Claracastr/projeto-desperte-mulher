@@ -3,18 +3,26 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:troca_contexto/common/storage_keys.dart';
 import '../../common/app_routes.dart';
 
-class LoginPage extends StatelessWidget {
-  LoginPage({super.key});
+class LoginPage extends StatefulWidget {
+  const LoginPage({super.key});
 
-  late BuildContext pageContext;
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
   @override
+  void dispose() {
+    emailController.dispose();
+    passwordController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
-
-    pageContext = context;
-
     return Scaffold(
       appBar: _buildAppBar(),
       body: _buildBody(),
@@ -42,7 +50,7 @@ class LoginPage extends StatelessWidget {
           const SizedBox(height: 24),
           _buildLoginButton(),
           const SizedBox(height: 24),
-          _buildRegisterLink(pageContext),
+          _buildRegisterLink(context),
         ],
       ),
     );
@@ -115,7 +123,6 @@ class LoginPage extends StatelessWidget {
   }
 
   Future<void> _onLoginPressed() async {
-
     if (passwordController.text.isEmpty || emailController.text.isEmpty) {
       return;
     }
@@ -125,7 +132,8 @@ class LoginPage extends StatelessWidget {
     final String password = preferences.getString(StorageKeys.password) ?? "";
 
     if (passwordController.text == password && emailController.text == email) {
-      Navigator.pushNamed(pageContext, AppRoutes.profilePage);
+      if (!mounted) return;
+      Navigator.pushNamed(this.context, AppRoutes.profilePage);
     }
   }
 }

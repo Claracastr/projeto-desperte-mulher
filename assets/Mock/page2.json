@@ -4,6 +4,7 @@
   "questions": [
     {
       "title": "Você sente que está vivendo de forma alinhada com quem você realmente é?",
+      "weight": 5,
       "answers": [
         {
           "title": "Sim, completamente",
@@ -25,48 +26,30 @@
     },
     {
       "title": "Com que frequência você dedica tempo para cuidar de si mesmo(a)?",
+      "multipleSelection": true,
+      "weight": 2,
       "answers": [
         {
-          "title": "Todos os dias",
-          "score": 3
-        },
-        {
-          "title": "Algumas vezes por semana",
-          "score": 2
-        },
-        {
-          "title": "Raramente",
+          "title": "Exercício físico",
           "score": 1
         },
         {
-          "title": "Nunca",
-          "score": 0
+          "title": "Meditação ou oração",
+          "score": 1
+        },
+        {
+          "title": "Saída com amigas",
+          "score": 1
+        },
+        {
+          "title": "Descanso adequado",
+          "score": 1
         }
       ]
     },
     {
       "title": "Você sente que está vivendo de forma alinhada com quem você realmente é?",
-      "answers": [
-        {
-          "title": "Sim, completamente",
-          "score": 3
-        },
-        {
-          "title": "Em parte, mas ainda tenho dúvidas",
-          "score": 2
-        },
-        {
-          "title": "Quase nunca",
-          "score": 1
-        },
-        {
-          "title": "Não, sinto que estou perdido(a)",
-          "score": 0
-        }
-      ]
-    },
-    {
-      "title": "Você sente que está vivendo de forma alinhada com quem você realmente é?",
+      "weight": 4,
       "answers": [
         {
           "title": "Sim, completamente",
@@ -88,6 +71,7 @@
     },
     {
       "title": "Você sente que está vivendo de forma alinhada com quem você realmente é?",
+      "weight": 3,
       "answers": [
         {
           "title": "Sim, completamente",
@@ -109,6 +93,29 @@
     },
     {
       "title": "Você sente que está vivendo de forma alinhada com quem você realmente é?",
+      "weight": 4,
+      "answers": [
+        {
+          "title": "Sim, completamente",
+          "score": 3
+        },
+        {
+          "title": "Em parte, mas ainda tenho dúvidas",
+          "score": 2
+        },
+        {
+          "title": "Quase nunca",
+          "score": 1
+        },
+        {
+          "title": "Não, sinto que estou perdido(a)",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "title": "Você sente que está vivendo de forma alinhada com quem você realmente é?",
+      "weight": 2,
       "answers": [
         {
           "title": "Sim, completamente",

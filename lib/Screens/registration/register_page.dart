@@ -3,13 +3,25 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../common/storage_keys.dart';
 
-class RegisterPage extends StatelessWidget {
+class RegisterPage extends StatefulWidget {
+  const RegisterPage({super.key});
 
+  @override
+  State<RegisterPage> createState() => _RegisterPageState();
+}
+
+class _RegisterPageState extends State<RegisterPage> {
   final TextEditingController fullNameController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
-  RegisterPage({super.key});
+  @override
+  void dispose() {
+    fullNameController.dispose();
+    emailController.dispose();
+    passwordController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -84,17 +96,18 @@ class RegisterPage extends StatelessWidget {
       width: double.infinity,
       height: 48,
       child: ElevatedButton(
-        onPressed: () => _onRegisterPressed(context),
+        onPressed: _onRegisterPressed,
         child: const Text('Cadastrar'),
       ),
     );
   }
 
-  Future<void> _onRegisterPressed(BuildContext context) async {
+  Future<void> _onRegisterPressed() async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setString(StorageKeys.fullName, fullNameController.text);
-    await prefs.setString(StorageKeys.email, emailController.text,);
+    await prefs.setString(StorageKeys.email, emailController.text);
     await prefs.setString(StorageKeys.password, passwordController.text);
-    Navigator.pop(context);
+    if (!mounted) return;
+    Navigator.pop(this.context);
   }
 }

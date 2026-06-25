@@ -6,23 +6,34 @@ Data: 13/06/2026
  */
 
 import 'package:flutter/material.dart';
-import '../Screens/Quiz/quiz_page.dart';
-import '../Screens/login/login_page.dart';
-import '../Screens/photo/photo_page.dart';
-import '../Screens/profile/profile_page.dart';
-import '../Screens/registration/register_page.dart';
-import '../Screens/result/result_page.dart';
+import '../core/design_system.dart';
+import '../features/about/about_page.dart';
+import '../features/help/help_page.dart';
+import '../features/history/history_page.dart';
+import '../features/onboarding/identify_form_page.dart';
+import '../features/onboarding/onboarding_page.dart';
+import '../features/questionnaire/questionnaire_page.dart';
+import '../features/results/result_page.dart';
+import '../features/admin/admin_dashboard_page.dart';
 import 'app_routes.dart';
 
 Widget createMaterialApp() {
   return MaterialApp(
-    initialRoute: AppRoutes.quizPage,
+    title: 'Desperte Mulher',
+    theme: DSTheme.lightTheme(),
+    darkTheme: DSTheme.darkTheme(),
+    themeMode: ThemeMode.system,
+    debugShowCheckedModeBanner: false,
+    initialRoute: AppRoutes.home,
     routes: {
-      AppRoutes.loginPage: (_) => LoginPage(),
-      AppRoutes.profilePage: (_) => ProfilePage(),
-      AppRoutes.registerPage: (_) => RegisterPage(),
-      AppRoutes.photoPage: (_) => SelectPhotoPage(),
-      AppRoutes.quizPage: (_) => QuizPage(),
-      AppRoutes.resultPage: (_) => ResultPage()}
+      AppRoutes.home: (_) => const OnboardingPage(),
+      AppRoutes.identify: (_) => const IdentifyFormPage(),
+      AppRoutes.questionnaire: (_) => const QuestionnairePage(),
+      AppRoutes.result: (_) => const ResultPage(),
+      AppRoutes.history: (_) => const HistoryPage(),
+      AppRoutes.help: (_) => const HelpPage(),
+      AppRoutes.about: (_) => const AboutPage(),
+      AppRoutes.admin: (_) => const AdminDashboardPage(),
+    },
   );
 }

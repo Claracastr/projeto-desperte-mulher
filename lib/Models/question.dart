@@ -10,14 +10,18 @@ import 'answer.dart';
 class Question {
   final String title;
   final List<Answer> answers;
+  final bool multipleSelection;
 
   Answer? selectedAnswer;
+  List<Answer> selectedAnswers;
 
   Question({
     required this.title,
     required this.answers,
+    this.multipleSelection = false,
     this.selectedAnswer,
-  });
+    List<Answer>? selectedAnswers,
+  }) : selectedAnswers = selectedAnswers ?? [];
 
   factory Question.fromJson(Map<String, dynamic> json) {
     return Question(
@@ -25,6 +29,7 @@ class Question {
       answers: (json['answers'] as List)
           .map((item) => Answer.fromJson(item))
           .toList(),
+      multipleSelection: json['multipleSelection'] as bool? ?? false,
     );
   }
 
@@ -32,6 +37,17 @@ class Question {
     return {
       'title': title,
       'answers': answers.map((e) => e.toJson()).toList(),
+      'multipleSelection': multipleSelection,
     };
+  }
+
+  bool get isAnswered =>
+      multipleSelection ? selectedAnswers.isNotEmpty : selectedAnswer != null;
+
+  int get score {
+    if (multipleSelection) {
+      return selectedAnswers.fold(0, (sum, answer) => sum + answer.score);
+    }
+    return selectedAnswer?.score ?? 0;
   }
 }

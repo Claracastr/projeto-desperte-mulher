@@ -33,14 +33,11 @@ class _ProfilePageState extends State<ProfilePage> {
   }
 
   Future<void> _loadUserData() async {
-    final SharedPreferences preferences =
-    await SharedPreferences.getInstance();
+    final SharedPreferences preferences = await SharedPreferences.getInstance();
 
-    final String storedName =
-        preferences.getString(StorageKeys.fullName) ?? '';
+    final String storedName = preferences.getString(StorageKeys.fullName) ?? '';
 
-    final String storedEmail =
-        preferences.getString(StorageKeys.email) ?? '';
+    final String storedEmail = preferences.getString(StorageKeys.email) ?? '';
 
     setState(() {
       userName = storedName;
@@ -185,9 +182,11 @@ class _ProfilePageState extends State<ProfilePage> {
   }
 
   void _onSettingsPressed() async {
-    print(await Navigator.pushNamed(
-         profileContext,
-        AppRoutes.photoPage));
+    final result = await Navigator.pushNamed(
+      profileContext,
+      AppRoutes.photoPage,
+    );
+    debugPrint(result?.toString());
   }
 
   void _onLogoutPressed() {
