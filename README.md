@@ -217,7 +217,7 @@ Score Total = Σ(resposta_score × resposta_weight) / max_score * 100
 
 ---
 
-## 🔄 Fluxo de Uso
+## Fluxo de Uso
 
 ```
 ┌─────────────────────────────────┐
@@ -687,23 +687,6 @@ Para dúvidas ou sugestões sobre o desenvolvimento:
 - **Email**: desenvolvimento@despertermulher.com
 - **Issues**: Reportar bugs via GitHub
 - **Documentação**: [Wiki do Projeto]
-
----
-
-##  Checklist de Apresentação
-
-- [ ] Executar aplicativo no dispositivo/emulador
-- [ ] Realizar fluxo completo: Onboarding → Questionário → Resultados
-- [ ] Demonstrar modo anônimo vs. identificado
-- [ ] Mostrar histórico de avaliações
-- [ ] Exibir seção de Ajuda
-- [ ] Demonstrar tema claro/escuro
-- [ ] Explicar sistema de pontuação
-- [ ] Mostrar código-fonte principal (Provider, Models)
-- [ ] Discutir medidas de segurança e privacidade
-- [ ] Apresentar possíveis melhorias futuras
-
-
 
 **Versão**: 1.0.0  
 **Última Atualização**: Junho 2026  
